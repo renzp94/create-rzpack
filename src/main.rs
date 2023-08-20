@@ -11,7 +11,7 @@ mod utils;
 async fn main() {
     let pkg = pkg::get_pkg();
     let welcome = format!("{} V{}", pkg.name.to_uppercase(), pkg.version);
-    println!("{}", log::blue(welcome.as_str()));
+    println!("\n{}", log::blue(welcome.as_str()));
 
     let args = args::Args::parse();
     let options = prompts::get_prompts(args);
